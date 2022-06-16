@@ -1,4 +1,28 @@
-body
+.brightness
 {
-	background: gray;
+		filter: brightness(0.8);
+}
+.topic
+{
+	font-size: 80px;
+	letter-spacing: 5px;
+	font-family: 'Raleway';
+	font-weight: 700;
+}
+.projects
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 200px;
+}
+.shadowBlock
+{
+	margin-top: 30px;
+	width: 80%;
+	padding: 40px 0px;
+	box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
+  display: flex;
+	justify-content: space-around;
 }
