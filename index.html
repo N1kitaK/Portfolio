@@ -4,9 +4,8 @@
   	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   	<link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="jquery.bubble.text.js" type="text/javascript">
-
-    </script>
+    <script src="jquery.bubble.text.js" type="text/javascript"></script>
+    <script src="jquery.rotating-slider.min.js" type="text/javascript"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
@@ -178,6 +177,42 @@
         </div>
       </div>
     </div>
+
+    <div class="tetris">
+      <h5 class="topic">Тетрис</h5>
+      <div class="rotating-slider-container">
+        <div class="rotating-slider">
+            <ul class="slides">
+                <li style="background-image: url(Img/Tetris_main.png);">
+                    <div class="slide-inner">
+                        <div>Bayonetta</div>
+                        <p>Bayonetta</p>
+                    </div>
+                </li>
+                <li style="background-image: url(Img/Tetris_game.png);">
+                    <div class="slide-inner">
+                        <div>Lara Croft</div>
+                        <p>Tomb Rider</p>
+                    </div>
+                </li>
+                <li style="background-image: url(Img/Tetris_setting.png);">
+                    <div class="slide-inner">
+                        <div>Aloy</div>
+                        <p>Horizon Zero Dawn</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(function() {
+        $('.rotating-slider').rotatingSlider({
+            slideHeight : 360,
+            slideWidth : Math.min(480, document.querySelector('.rotating-slider-container' ).offsetWidth)
+        });
+      });
+    </script>
 
     <script src="upScript.js" type="text/javascript"></script>
   </body>
