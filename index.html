@@ -24,25 +24,91 @@
           <div class="navbar-nav">
             <a class="nav-link" href="#experience">Опыт работы</a>
             <a class="nav-link" href="#projects">Проекты</a>
+            <a class="nav-link" href="#tetris">Тетрис</a>
           </div>
         </div>
       </div>
     </nav>
 
-    <div id="bubble-1"></div>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        var $element = $('#bubble-1');
-        var newText = 'Печатающийся текст';
-        bubbleText({
-            element: $element,
-            newText: newText,
-            speed: 1000,
-        });
-      })
-    </script>
+    <div class="aboutMe">
+      <svg class="a-stroke" viewBox="0 0 1000 70">
+        <symbol id="s-text">
+            <text x="50%" y="90%">Обо мне</text>
+        </symbol>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+      </svg>
+      <div class="shadowBlock">
+        <img src="Img/samurae.webp" alt="">
+        <div class="text">
+          <div id="bubble-1"></div>
+          <script type="text/javascript">
+            $(document).ready(function() {
+              var $element = $('#bubble-1');
+              var newText = 'std::cout << "Hello, world!";';
+              bubbleText({
+                  element: $element,
+                  newText: newText,
+                  speed: 1000,
+              });
+            })
+          </script>
+          <div style="font-size: 24px; font-family: 'Open Sans'; font-weight: 400;">
+            <div class="content-block">
+                <p>Учусь в Минском колледже предпринимательства на 3 курсе специальности...</p>
+                <div class="content-block1 hide-content" style="margin-bottom: 10px">
+                  <p>ПОИТ</p>
+                  <div class="content-block2 hide-content1" style="margin-bottom: 10px">
+                    <p>(Программное обеспечение информацинных технологий)</p>
+                    <p class="hide-content2">(ну тип программист)</p>
+                    <button class="show-more2">Показать еще</button>
+                  </div>  
+                  <script>
+                    $(".content-block2").each(function() {
+                        let more = $(this).find(".show-more2");
+                        let hide = $(this).find(".hide-content2");
+                        hide.hide();
+                        more.click(function() {
+                            hide.slideToggle();
+                            more.text(more.text() == "Скрыть" ? "Показать еще" : "Скрыть");
+                        });
+                    });
+                  </script> 
+                  <button class="show-more1">Показать еще</button>
+                </div>  
+                <script>
+                  $(".content-block1").each(function() {
+                      let more = $(this).find(".show-more1");
+                      let hide = $(this).find(".hide-content1");
+                      hide.hide();
+                      more.click(function() {
+                          hide.slideToggle();
+                          more.text(more.text() == "Скрыть" ? "Показать еще" : "Скрыть");
+                      });
+                  });
+                </script> 
+                <button class="show-more">Показать еще</button>    
+            </div>  
+            <script>
+              $(".content-block").each(function() {
+                  let more = $(this).find(".show-more");
+                  let hide = $(this).find(".hide-content");
+                  hide.hide();
+                  more.click(function() {
+                      hide.slideToggle();
+                      more.text(more.text() == "Скрыть" ? "Показать еще" : "Скрыть");
+                  });
+              });
+            </script>  
+          </div>
+        </div>
+      </div>
+    </div>
 
-  	<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  	<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel" style="margin-top: 200px">
   	  <div class="carousel-indicators">
   	    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
   	    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -148,57 +214,54 @@
         <div class="card" style="width: 18rem;">
           <img src="Img/SeaBattle.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">Игра "Морско бой", разработана на языке C++, IDE C++ Builder.</p>
+            <p class="card-text" style="text-align: justify;">Игра "Морско бой", разработана на языке C++, IDE C++ Builder.</p>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
           <img src="Img/Tetris.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">Игра "Тетрис", разработана на языке C#, IDE Visual Studio.</p>
+            <p class="card-text" style="text-align: justify;">Игра "Тетрис", разработана на языке C#, IDE Visual Studio.</p>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
           <img src="Img/Site.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">Сайт продажи кораблей, разработан на HTML и CSS.</p>
+            <p class="card-text" style="text-align: justify;">Сайт продажи кораблей, разработан на HTML и CSS.</p>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
           <img src="Img/Hotel.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">АРМ для менеджеров гостиницы, разработана на языке C++, IDE C++ Builder.</p>
+            <p class="card-text" style="text-align: justify;">АРМ для менеджеров гостиницы, разработана на языке C++, IDE C++ Builder.</p>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
           <img src="Img/Converter.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">Сайт конвертер длины в массу, разработан на HTML и CSS.</p>
+            <p class="card-text" style="text-align: justify;">Сайт конвертер длины в массу, разработан на HTML, CSS и JS.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="tetris">
+    <div id="tetris" class="tetris">
       <h5 class="topic">Тетрис</h5>
       <div class="rotating-slider-container">
         <div class="rotating-slider">
             <ul class="slides">
                 <li style="background-image: url(Img/Tetris_main.png);">
                     <div class="slide-inner">
-                        <div>Bayonetta</div>
-                        <p>Bayonetta</p>
+                        <div>Menu</div>
                     </div>
                 </li>
                 <li style="background-image: url(Img/Tetris_game.png);">
                     <div class="slide-inner">
-                        <div>Lara Croft</div>
-                        <p>Tomb Rider</p>
+                        <div>Game</div>
                     </div>
                 </li>
-                <li style="background-image: url(Img/Tetris_setting.png);">
+                <li style="background-image: url(Img/Tetris_settings.png);">
                     <div class="slide-inner">
-                        <div>Aloy</div>
-                        <p>Horizon Zero Dawn</p>
+                        <div>Settings</div>
                     </div>
                 </li>
             </ul>

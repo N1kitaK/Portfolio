@@ -7,7 +7,19 @@
 }
 .brightness
 {
-		filter: brightness(0.8);
+	filter: brightness(0.8);
+}
+.aboutMe
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text
+{
+    font-size: 20px;
+    text-align: justify;
 }
 .topic
 {
@@ -184,4 +196,47 @@
 	font-size: 16px;
 	font-family: 'Open Sans';
 	font-weight: 400;
+}
+
+.a-stroke {
+    margin: 20px 0; 
+}    
+.a-stroke .text {
+    fill: none;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-dasharray: 70 330;
+    stroke-dashoffset: 0;
+    animation: stroke 6s infinite linear;
+    font-family: Tahoma, sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-anchor: middle;
+}
+.a-stroke .text:nth-child(5n + 1) {
+    stroke: #337AB7;
+    animation-delay: -1.2s;
+}
+.a-stroke .text:nth-child(5n + 2) {
+    stroke: #357fbf;
+    animation-delay: -2.4s;
+}
+.a-stroke .text:nth-child(5n + 3) {
+    stroke: #3784c7;
+    animation-delay: -3.6s;
+}
+.a-stroke .text:nth-child(5n + 4) {
+    stroke: #3174af;
+    animation-delay: -4.8s;
+}
+.a-stroke .text:nth-child(5n + 5) {
+    stroke: #2f6fa7;
+    animation-delay: -6s;
+}
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: -400;
+    }
 }
