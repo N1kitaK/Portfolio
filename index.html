@@ -14,6 +14,28 @@
     <title></title>
   </head>
   <body>
+    <div class="preloader">    
+        <svg>
+            <g>
+                <path d="M 50,100 A 1,1 0 0 1 50,0"/>
+            </g>
+            <g>
+                <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
+            </g>
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#BFE2FF;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#337AB7;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+    <script>
+      $(window).on('load', function () {
+          $('.preloader').addClass("preloader-remove");     
+      });
+    </script>
+
     <nav class="navbar sticky-top navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Портфолио</a>
@@ -24,7 +46,6 @@
           <div class="navbar-nav">
             <a class="nav-link" href="#experience">Опыт работы</a>
             <a class="nav-link" href="#projects">Проекты</a>
-            <a class="nav-link" href="#tetris">Тетрис</a>
           </div>
         </div>
       </div>
@@ -33,7 +54,7 @@
     <div class="aboutMe">
       <svg class="a-stroke" viewBox="0 0 1000 70">
         <symbol id="s-text">
-            <text x="50%" y="90%">Обо мне</text>
+            <text x="50%" y="90%">ОБО МНЕ</text>
         </symbol>
         <use class="text" xlink:href="#s-text"></use>
         <use class="text" xlink:href="#s-text"></use>
@@ -58,6 +79,7 @@
           </script>
           <div style="font-size: 24px; font-family: 'Open Sans'; font-weight: 400;">
             <div class="content-block">
+                <h3>Никита Ковальчук</h3>
                 <p>Учусь в Минском колледже предпринимательства на 3 курсе специальности...</p>
                 <div class="content-block1 hide-content" style="margin-bottom: 10px">
                   <p>ПОИТ</p>
@@ -242,6 +264,39 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="maket">
+      <p class="topic">Макеты сайта</p>
+       <div class="sl-container" style="height: 340px">
+        <div class="view view-after">
+          <img src="Img/Frame7.png"/>      
+        </div>
+        <div class="view view-before">
+          <img src="Img/Frame9.png"/>
+        </div>
+        <div class="dragme"><div class="dr-circle"><i class="fa fa-arrows-h" aria-hidden="true"></i></div></div>
+      </div>
+      <script>
+        (function($) {
+            var $dragMe = $(".dragme"),
+            $container = $(".sl-container"),
+            $viewAfter = $(".view-after");
+            $container.on("click", function(event) {
+                var eventLeft = event.pageX - $container.offset().left - 15;
+                animateTo(eventLeft);
+            });
+            animateTo("50%");
+            function animateTo(_left) {
+                $dragMe.animate({
+                    left: _left
+                }, 'slow', 'linear');
+                $viewAfter.animate({
+                    width: _left
+                }, 'slow', 'linear');
+            }
+        })(jQuery);
+      </script>
     </div>
 
     <div id="tetris" class="tetris">
